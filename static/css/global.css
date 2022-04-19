@@ -32,10 +32,8 @@ body {
 }
 
 .half {
-	/* 650px, 1100px */
 	height: 95%;
 	width: 48%;
-	max-width: 10in;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	outline: 5px solid black;
@@ -52,7 +50,6 @@ body {
 	position: absolute;
 	width: 48vw;
 	height: auto;
-	z-index: 0;
 	margin-top: 4%;
 	z-index: 1000;
 }
@@ -127,8 +124,13 @@ body {
 }
 
 /* Dashboard layout */
+.gearLetter {
+	font-size: 2vw;
+}
+
 #dashContainer {
 	position: relative;
+	width: 100%;
 }
 
 #dash {
@@ -202,6 +204,10 @@ body {
 	height: 17%;
 }
 
+#cruiseToggle {
+	font-size: 1.2vw;
+}
+
 #cruiseDialogue {
 	font-size: 1.2vw;
 }
@@ -210,7 +216,7 @@ body {
 	position: absolute;
 	top: 83%;
 	left: 73%;
-	width: 12%;
+	width: 15%;
 	height: 10%;
 	display: inline-flex;
 	justify-content: space-between;

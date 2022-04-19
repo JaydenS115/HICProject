@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div id="dashboard" class="half">
+	<div id="dashboard" class="half flexRow">
 		<img id="dashBackground" alt="dashboard background" src="../static/images/steeringWheelCropped2.png">
 		<div id="dashContainer">
 			<img id="dash" alt="Driver dashboard" src="../static/images/driver_dashboard_complete.png">
@@ -45,21 +45,39 @@
 			</div>
 		</div>
 	</div>
-	<div id="mainScreen" class="half">
-		<div class="screen" id="homeScreen">
-			Home screen
-			<a href="#audioScreen">Audio</a>
-			<a href="#phoneScreen">Phone</a>
+	<div id="mainScreen" class="half flexRow">
+		<div id="taskbarSide" class="flexRow">
+			<p class="fa fa-comment" style="font-size: 250%"></p>
+			<p class="fa fa-comment" style="font-size: 250%"></p>
+			<p class="fa fa-comment" style="font-size: 250%"></p>
 		</div>
-		<div class="screen" id="audioScreen">
-			Audio screen
-			<a href="#homeScreen">Home</a>
-			<a href="#phoneScreen">Phone</a>
+		<div id="screenContainer">
+			<div class="screen" id="homeScreen">
+				Home screen
+				<button onclick="switchScreen('audioScreen')">Go to audio screen</button>
+			</div>
+			<div class="screen" id="audioScreen">
+				Audio screen
+				<button onclick="switchScreen('homeScreen')">Go to home screen</button>
+			</div>
+			<div class="screen" id="phoneScreen">
+				Phone screen
+			</div>
+			<div class="screen" id="mapScreen">
+				Map screen
+			</div>
+			<div class="screen" id="statScreen">
+				Stat screen
+			</div>
+			<div class="screen" id="settingScreen">
+				Settings screen
+			</div>
+			<div class="screen" id="backupScreen">
+				Backup screen
+			</div>
 		</div>
-		<div class="screen" id="phoneScreen">
-			Phone screen
-			<a href="#homeScreen">Home</a>
-			<a href="#audioScreen">Audio</a>
+		<div id="taskbarBottom" class="flexRow">
+
 		</div>
 	</div>
 </body>

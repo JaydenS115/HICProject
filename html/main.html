@@ -10,14 +10,39 @@
 	<meta name="author" content="Colby Reinhart, Vanessa Sanders, Jayden Stearns">
 
 	<link rel="stylesheet" href="../static/css/global.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="../static/js/main.js"></script>
 </head>
 
 <body>
 	<div id="dashboard" class="half">
+		<img id="dashBackground" alt="dashboard background" src="../static/images/steeringWheelCropped2.png">
 		<div id="dashContainer">
 			<img id="dash" alt="Driver dashboard" src="../static/images/driver_dashboard_complete.png">
 			<img id="speedSign" alt="speed limit sign" src="../static/images/speed_limit_template.png">
+			<p id="speedValue">35</p>
+			<p id="fuelLevel" class="mainFont brightBlue">POWER</p>
+			<p id="fuelIcon" class="fa fa-battery-full brightBlue"></p>
+			<div id="songWindow">
+				<img id="songPic" alt="Album Picture" src="../static/images/beatles.jpg">
+				<p id="songTitle" class="mainFont goodWhite">Hey Jude</p>
+				<p id="songArtist" class="mainFont goodWhite">The Beatles</p>
+			</div>
+			<p id="driverSpeed" class="mainFont goodWhite">50 MPH</p>
+			<div id="cruise">
+				<p id="cruiseToggle" class="brightBlue fa fa-toggle-on"></p>
+				<p id="cruiseDialogue" class="brightBlue mainFont">CRUISE ON</p>
+			</div>
+			<div id="gear">
+				<p id="parkGear" class="goodWhite mainFont">P</p>
+				<p id="reverseGear" class="brightBlue mainFont">R</p>
+				<p id="neutralGear" class="brightBlue mainFont">N</p>
+				<p id="driveGear" class="brightBlue mainFont">D</p>
+			</div>
+			<div id="economy">
+				<img id="econGauge" alt="economy gauge" src="../static/images/economy_graph.png">
+				<p id="econDialogue" class="goodWhite mainFont">ECONOMY (Wh/mi)</p>
+			</div>
 		</div>
 	</div>
 	<div id="mainScreen" class="half">

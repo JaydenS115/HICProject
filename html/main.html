@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Smart Car Interface</title>
 	<meta name="description" content="For all of your driving needs and luxuries">
@@ -13,6 +14,28 @@
 </head>
 
 <body>
-	
+	<div id="dashboard" class="half">
+		<div id="dashContainer">
+			<img id="dash" alt="Driver dashboard" src="../static/images/driver_dashboard_complete.png">
+			<img id="speedSign" alt="speed limit sign" src="../static/images/speed_limit_template.png">
+		</div>
+	</div>
+	<div id="mainScreen" class="half">
+		<div class="screen" id="homeScreen">
+			Home screen
+			<a href="#audioScreen">Audio</a>
+			<a href="#phoneScreen">Phone</a>
+		</div>
+		<div class="screen" id="audioScreen">
+			Audio screen
+			<a href="#homeScreen">Home</a>
+			<a href="#phoneScreen">Phone</a>
+		</div>
+		<div class="screen" id="phoneScreen">
+			Phone screen
+			<a href="#homeScreen">Home</a>
+			<a href="#audioScreen">Audio</a>
+		</div>
+	</div>
 </body>
 </html>

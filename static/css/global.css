@@ -1,0 +1,10 @@
+/* Color pallette */
+:root {
+	--background: #00171F;
+	--good-white: #EFEFEF;
+	--bright-blue: #00A8E8;
+	--less-bright-blue: #007EA7;
+	--dark-blue: #003459;
+	--good-green: #1DB954;
+	--good-red: #DB4437;
+}

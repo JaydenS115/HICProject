@@ -241,3 +241,38 @@ body {
 #econDialogue {
 	font-size: 1.2vw;
 }
+
+.contactListingLight {
+	width: 100%;
+	height: 12%;
+	background-color: var(--bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+}
+
+.contactListingDark{
+	width: 100%;
+	height: 12%;
+	background-color: var(--less-bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+}
+
+.contactIcon{
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.topContainer{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title{
+	font-size: 5vw;
+}

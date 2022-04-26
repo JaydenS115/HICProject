@@ -7,5 +7,5 @@ function switchScreen(newScreen)
 	});
 
 	// Reveal the screen we want to look at
-	document.querySelector("#" + newScreen).style.display = "block";
+	document.querySelector("#" + newScreen).style.display = "flex";
 }

@@ -27,10 +27,10 @@
 			<p id="speedValue">35</p>
 			<p id="fuelLevel" class="brightBlue">POWER</p>
 			<p id="fuelIcon" class="fa fa-battery-full brightBlue"></p>
-			<div id="songWindow">
-				<img id="songPic" alt="Album Picture" src="../static/images/beatles.jpg">
-				<p id="songTitle" class="goodWhite">Hey Jude</p>
-				<p id="songArtist" class="goodWhite">The Beatles</p>
+			<div id="songWindow" class="goodWhite stream">
+				<img id="songPic" class="songFile" alt="Album Picture" src="../static/images/beatles.jpg">
+				<p id="songTitle" class="songTitle">Hey Jude</p>
+				<p id="songArtist" class="songArtist">The Beatles</p>
 			</div>
 			<p id="driverSpeed" class="goodWhite">50 MPH</p>
 			<div id="cruise">
@@ -86,24 +86,24 @@
 					<div id="soundLocator">
 						SOUND
 						<div id="soundLocatorBox">
-							<img id="carImage" alt="Car representation" src="../static/images/car_top_view.png">
+							<img id="carImage" class="clickable" alt="Car representation" src="../static/images/car_top_view.png">
 							<div id="soundMover">
 								<i id="soundMoverGlyph" class="fa-solid fa-o brightBlue"></i>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="musicPlayer">
-					<h1>Hey Jude</h1>
-					The Beatles
-					<img alt="albumCover" src="../static/images/beatles.jpg">
+				<div id="musicPlayer" class="stream">
+					<h1 class="songTitle">Hey Jude</h1>
+					<p class="songArtist">The Beatles</p>
+					<img class="songFile" alt="albumCover" src="../static/images/beatles.jpg">
 				</div>
 				<div id="soundBar">
-					<i class="fa-regular fa-bookmark"></i>
-					<i class="fa-solid fa-backward-step"></i>
-					<i class="fa-solid fa-pause"></i>
-					<i class="fa-solid fa-forward-step"></i>
-					<i class="fa-solid fa-repeat"></i>
+					<i class="clickable fa-regular fa-bookmark hollowBookmark toggleable"></i>
+					<i class="clickable fa-solid fa-backward-step songBackward"></i>
+					<i class="clickable fa-solid fa-pause pauseButton toggleable"></i>
+					<i class="clickable fa-solid fa-forward-step songForward"></i>
+					<i class="clickable fa-solid fa-repeat"></i>
 				</div>
 			</div>
 

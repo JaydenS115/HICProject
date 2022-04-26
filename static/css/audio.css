@@ -100,12 +100,13 @@
 }
 
 #musicPlayer > h1 {
-	font-size: 5vw;
+	font-size: 3vw;
 }
 
 #musicPlayer > img {
 	height: 80%;
 	width: auto;
+	max-width: 40%;
 }
 
 #soundBar {

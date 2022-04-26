@@ -64,12 +64,25 @@
 	height: 65%;
 	border-radius: 5%;
 	padding: 5%;
+	position: relative;
 }
 
 #soundLocatorBox > img {
 	height: 100%;
 	width: auto;
 	max-height: 18vh;
+}
+
+#soundMover {
+	width: 5vw;
+	height: 5vh;
+	position: relative;
+	bottom: 75%;
+	left: 25%;
+}
+
+#soundMoverGlyph {
+	font-size: 40px;
 }
 
 #musicPlayer {

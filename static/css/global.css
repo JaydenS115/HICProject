@@ -102,6 +102,8 @@ body {
 	flex-wrap: nowrap;
 	align-items: flex-start;
 	align-content: flex-start;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .screenTitle {

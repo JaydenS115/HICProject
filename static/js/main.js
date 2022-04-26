@@ -1,3 +1,6 @@
+//
+// SCREEN NAVIGATION
+//
 
 function switchScreen(newScreen)
 {
@@ -11,50 +14,7 @@ function switchScreen(newScreen)
 }
 
 //
-// Do init stuff
-//
-
-// Click sound effect
-const clickSound = new Audio("../static/sounds/tap.mp3");
-document.querySelectorAll(".clickable").forEach((e) => {
-	e.addEventListener("click", () => {
-		clickSound.play();
-	});
-});
-
-// Sound adjustor
-const soundLocatorBox = document.querySelector("#soundLocatorBox");
-const carImage = document.querySelector("#carImage");
-let soundMover = document.querySelector("#soundMover");
-carImage.addEventListener("click", (e) => {
-	const x = parseInt(e.clientX - soundLocatorBox.getBoundingClientRect().left - 15);
-	const y = parseInt(e.clientY - soundLocatorBox.getBoundingClientRect().top - 15);
-	soundMover.style.position = "absolute";
-	soundMover.style.left = x.toString() + "px";
-	soundMover.style.top = y.toString() + "px";
-});
-
-// Toggleable buttons
-const toggleButtons = {
-	"hollowBookmark": "clickable fa-solid fa-bookmark solidBookmark toggleable",
-	"solidBookmark": "clickable fa-regular fa-bookmark hollowBookmark toggleable",
-	"pauseButton": "clickable fa-solid fa-play playButton toggleable",
-	"playButton": "clickable fa-solid fa-pause pauseButton toggleable"
-};
-document.querySelectorAll(".toggleable").forEach((e) => {
-	e.addEventListener("click", () => {
-		e.classList.forEach((className) => {
-			const classes = toggleButtons[className];
-			if (classes != undefined)
-			{
-				e.className = classes;
-			}
-		});
-	});
-});
-
-//
-// Media player
+// MEDIA PLAYER
 //
 
 const songs = {
@@ -103,5 +63,141 @@ document.querySelectorAll(".songBackward").forEach((e) => {
 document.querySelectorAll(".songForward").forEach((e) => {
 	e.addEventListener("click", () => {
 		setNewSong(switchSong(1));
+	});
+});
+
+//
+// BLUETOOTH
+//
+
+let bluetoothConnected = true;
+// Simulate Bluetooth connecting/disconnecting
+function toggleBluetooth()
+{
+	const bluetoothFeedback = document.querySelector("#bluetoothFeedback");
+	let toggleButton = document.querySelector("#btToggle");
+	if (bluetoothConnected)
+	{
+		bluetoothFeedback.innerHTML = "No device connected";
+		toggleButton.innerHTML = "Connect";
+		bluetoothConnected = false;
+	}
+	else
+	{
+		bluetoothFeedback.innerHTML = "Connecting . . .";
+		setTimeout(() => {
+			bluetoothFeedback.innerHTML = "Connected - Jon's Iphone";
+			toggleButton.innerHTML = "Disconnect";
+			bluetoothConnected = true;
+		}, 3000);
+	}
+}
+function turnoffBluetooth()
+{
+	bluetoothConnected = true;
+	toggleBluetooth();
+}
+function turnonBluetooth()
+{
+	bluetoothConnected = false;
+	toggleBluetooth();
+}
+
+//
+// PROFILES
+//
+
+const newUsername = "<input type='text' id='newName' class='goodInput clickable'>" +
+"<button type='button' class='settingsButton goodWhite mainFont clickable'" +
+" onclick='submitProfileEdit(this)'>Submit</button>";
+
+// Delete a profile from the list
+function deleteProfile(profileButton)
+{
+	profileButton.parentNode.remove();
+}
+
+// Edit the name of a profile
+function editProfile(profileButton)
+{
+	let user = profileButton.parentNode.querySelector(".user");
+	const name = user.innerHTML;
+	user.innerHTML = newUsername;
+	profileButton.parentNode.querySelector("#newName").value = name;
+	updateClicking(profileButton.parentNode);
+}
+
+// Utility function used for submitting profile name changes
+function submitProfileEdit(profileName)
+{
+	const newName = profileName.parentNode.querySelector("#newName").value;
+	profileName.parentNode.innerHTML = newName;
+}
+
+// Create a new profile
+function newProfile()
+{
+	let newProfile = document.createElement("div");
+	newProfile.classList.add("settingRow");
+	newProfile.innerHTML = '<div class="brightBlue settingName user">' + newUsername + '</div>' +
+	'<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>' +
+	'<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>';
+	let profileList = document.querySelector("#profileList");
+	profileList.appendChild(newProfile);
+	updateClicking(profileList);
+}
+
+//
+// UTILITY FUNCTIONS
+//
+
+// Update new elements to have the clickable class
+// Provide the lowest necessary parent as an argument
+function updateClicking(node)
+{
+	console.log(node);
+	node.querySelectorAll(".clickable").forEach((e) => {
+		e.addEventListener("click", () => {
+			clickSound.play();
+		});
+	});
+}
+
+//
+// Do init stuff
+//
+
+// Click sound effect
+const clickSound = new Audio("../static/sounds/tap.mp3");
+updateClicking(document);
+
+// Sound adjustor
+const soundLocatorBox = document.querySelector("#soundLocatorBox");
+const carImage = document.querySelector("#carImage");
+let soundMover = document.querySelector("#soundMover");
+carImage.addEventListener("click", (e) => {
+	const x = parseInt(e.clientX - soundLocatorBox.getBoundingClientRect().left - 15);
+	const y = parseInt(e.clientY - soundLocatorBox.getBoundingClientRect().top - 15);
+	soundMover.style.position = "absolute";
+	soundMover.style.left = x.toString() + "px";
+	soundMover.style.top = y.toString() + "px";
+});
+
+// Toggleable buttons
+const toggleButtons = {
+	"hollowBookmark": "clickable fa-solid fa-bookmark solidBookmark toggleable",
+	"solidBookmark": "clickable fa-regular fa-bookmark hollowBookmark toggleable",
+	"pauseButton": "clickable fa-solid fa-play playButton toggleable",
+	"playButton": "clickable fa-solid fa-pause pauseButton toggleable"
+};
+document.querySelectorAll(".toggleable").forEach((e) => {
+	e.addEventListener("click", () => {
+		e.classList.forEach((className) => {
+			const classes = toggleButtons[className];
+			if (classes != undefined)
+			{
+				e.className = classes;
+			}
+		});
 	});
 });

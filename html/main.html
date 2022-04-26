@@ -123,11 +123,11 @@
 						<h1>BLUETOOTH</h1>
 						<i class="fa-brands fa-bluetooth-b settingIcon"></i>
 					</div>
-					<p class="brightBlue">Paired - Jon's Iphone</p>
-					<div class="settingRow">
-						<button type="button" class="settingsButton goodWhite mainFont">Disconnect</button>
-						<button type="button" class="settingsButton goodWhite mainFont">Pair</button>
-						<button type="button" class="settingsButton goodWhite mainFont">Forget</button>
+					<p id="bluetoothFeedback" class="brightBlue">Connected - Jon's Iphone</p>
+					<div id="bluetoothButtons" class="settingRow">
+						<button type="button" id="btToggle" class="settingsButton goodWhite mainFont clickable" onclick="toggleBluetooth()">Disconnect</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="turnonBluetooth()">Pair</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="turnoffBluetooth()">Forget</button>
 					</div>
 				</div>
 
@@ -139,21 +139,21 @@
 						<i class="fa-solid fa-bolt settingIcon"></i>
 					</div>
 					<div class="settingRow">
-						<label class="switch">
+						<label class="switch clickable">
 							<input type="checkbox" checked>
 							<span class="slider round"></span>
 						</label>
 						<p class="brightBlue">ECO Mode</p>
 					</div>
 					<div class="settingRow">
-						<label class="switch">
+						<label class="switch clickable">
 							<input type="checkbox" checked>
 							<span class="slider round"></span>
 						</label>
 						<p class="brightBlue">Traction Control</p>
 					</div>
 					<div class="settingRow">
-						<label class="switch">
+						<label class="switch clickable">
 							<input type="checkbox" checked>
 							<span class="slider round"></span>
 						</label>
@@ -163,26 +163,29 @@
 
 				<hr>
 
-				<div class="settingBlock">
+				<div id="profileList" class="settingBlock">
 					<div class="settingBlockTitle">
 						<h1>PROFILE</h1>
 						<i class="fa-solid fa-user settingIcon"></i>
 					</div>
 					<div class="settingRow">
-						<p class="brightBlue settingName">Jon</p>
-						<button type="button" class="settingsButton goodWhite mainFont">Delete</button>
-						<button type="button" class="settingsButton goodWhite mainFont">Edit</button>
+						<div class="brightBlue settingName user">Jon</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
 					</div>
 					<div class="settingRow">
-						<p class="brightBlue settingName">Lisa</p>
-						<button type="button" class="settingsButton goodWhite mainFont">Delete</button>
-						<button type="button" class="settingsButton goodWhite mainFont">Edit</button>
+						<div class="brightBlue settingName user">Lisa</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
 					</div>
 					<div class="settingRow">
-						<p class="brightBlue settingName">Blake</p>
-						<button type="button" class="settingsButton goodWhite mainFont">Delete</button>
-						<button type="button" class="settingsButton goodWhite mainFont">Edit</button>
+						<div class="brightBlue settingName user">Blake</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
 					</div>
+				</div>
+				<div class="settingBlock">
+					<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="newProfile()">New profile</button>
 				</div>
 
 				<hr>
@@ -194,11 +197,11 @@
 					</div>
 					<div class="settingRow">
 						<p class="brightBlue settingName">Home</p>
-						<input id="homeInput" class="mainFont" type="text" value="375 Eastway Drive, Kent, OH 44214">
+						<input id="homeInput" class="mainFont goodInput clickable" type="text" value="375 Eastway Drive, Kent, OH 44214">
 					</div>
 					<div class="settingRow">
 						<p class="brightBlue settingName">Work</p>
-						<input id="homeInput" class="mainFont" type="text" value="211 Commerce Drive, Medina, OH 44256">
+						<input id="workInput" class="mainFont goodInput clickable" type="text" value="211 Commerce Drive, Medina, OH 44256">
 					</div>
 
 				</div>

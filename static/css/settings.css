@@ -60,11 +60,28 @@ hr {
 	width: 20%;
 }
 
-#homeInput {
+.user {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.goodInput {
 	border: none;
 	padding: 1%;
-	width: 75%;
 	border-radius: 0.5vw;
+}
+
+#homeInput, #workInput {
+	width: 75%;
+}
+
+#newName {
+	width: 110%;
+	font-size: 75%;
 }
 
 /* SWITCH CSS */

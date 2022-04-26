@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../static/css/settings.css">
 	<link rel="stylesheet" href="../static/css/scrollbar.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<script src="../static/js/main.js"></script>
+	<script defer src="../static/js/main.js"></script>
 </head>
 
 <body class="mainFont">
@@ -58,9 +58,9 @@
 		<div id="screenContainer">
 			<div class="screen" id="homeScreen">
 				Home screen
-				<button onclick="switchScreen('audioScreen')">Go to audio screen</button>
+				<button class="clickable" onclick="switchScreen('audioScreen')">Go to audio screen</button>
 				Settings screen
-				<button onclick="switchScreen('settingScreen')">Go to settings screen</button>
+				<button class="clickable" onclick="switchScreen('settingScreen')">Go to settings screen</button>
 			</div>
 
 			<div class="screen" id="audioScreen">

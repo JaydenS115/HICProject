@@ -1,0 +1,25 @@
+.contactListingLight {
+	width: 100%;
+	height: 12%;
+	background-color: var(--bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+	justify-content: space-between;
+	padding: 1%;
+}
+
+.contactListingDark{
+	width: 100%;
+	height: 12%;
+	background-color: var(--less-bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+	justify-content: space-between;
+	padding: 1%;
+}
+
+.contactIcon{
+	padding:2%;
+}

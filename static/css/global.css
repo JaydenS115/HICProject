@@ -137,3 +137,15 @@ body {
 	width: 91.5%;
 	height: 95%;
 }
+
+
+/*Vanessa's Code*/
+
+
+.topContainer{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

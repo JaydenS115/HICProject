@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="../static/css/audio.css">
 	<link rel="stylesheet" href="../static/css/settings.css">
 	<link rel="stylesheet" href="../static/css/scrollbar.css">
+	<link rel="stylesheet" href="../static/css/home.css">
+	<link rel="stylesheet" href="../static/css/stats.css">
+	<link rel="stylesheet" href="../static/css/phone.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<script defer src="../static/js/main.js"></script>
 </head>
@@ -57,10 +60,28 @@
 		</div>
 		<div id="screenContainer">
 			<div class="screen" id="homeScreen">
-				Home screen
-				<button class="clickable" onclick="switchScreen('audioScreen')">Go to audio screen</button>
-				Settings screen
-				<button class="clickable" onclick="switchScreen('settingScreen')">Go to settings screen</button>
+				
+				<div class="topContainer" style="height: 35% !important;">
+				<div class="mainMapContainer" >
+					<a onclick="switchScreen('mapScreen')"><img id="mapPicture" alt="map" src="../static/images/outstanding-road-map-vectors.webp"></a>
+				</div>
+				</div>
+				<div class="appRow">
+					<div class="appContainer">
+						<a onclick="switchScreen('audioScreen')"><p class="clickable contactIcon fa fa-music" style="font-size: 200%; color: red;"></p></a>
+					</div>
+					<div class="appContainer">
+						<a onclick="switchScreen('phoneScreen')"><p class="clickable contactIcon fa fa-phone-square" style="font-size: 200%; color: green;"></p></a>
+					</div>
+				</div>
+				<div class="appRow">
+					<div class="appContainer">
+						<a onclick="switchScreen('statScreen')"><img class="clickable appImage" alt="Stats Diagram" src="../static/images/economy_graph.png"></a>
+					</div>
+					<div class="appContainer">
+						<a onclick="switchScreen('settingScreen')"><p class="clickable contactIcon fa fa-gear" style="font-size: 200%; color: silver;"></p></a>
+					</div>
+				</div>
 			</div>
 
 			<div class="screen" id="audioScreen">
@@ -108,13 +129,89 @@
 			</div>
 
 			<div class="screen" id="phoneScreen">
-				Phone screen
+				<div class="topContainer">
+					<h1 class="mainFont title">Phone Contacts</h1>
+				</div>
+				<div class="contactListingLight mainFont">Test Contact 1
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingDark mainFont">Test Contact 2
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingLight mainFont">Test Contact 3
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingDark mainFont">Test Contact 4
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingLight mainFont">Test Contact 5
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingDark mainFont">Test Contact 6
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingLight mainFont">Test Contact 7
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingDark mainFont">Test Contact 8
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingLight mainFont">Test Contact 9
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
+				<div class="contactListingDark mainFont">Test Contact 10
+					<p class="clickable contactIcon fa fa-comment" style="font-size: 150%"></p>
+					<a class="clickable myBtn"><p class="contactIcon  fa fa-phone-square" style="font-size: 150%;"></p></a>
+					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
+				</div>
 			</div>
 			<div class="screen" id="mapScreen">
 				Map screen
 			</div>
 			<div class="screen" id="statScreen">
-				Stat screen
+				<div class="topContainer">
+					<div class="batteryContainer mainFont title">
+						<p class="contactIcon fa fa-battery" style="font-size: 150%"></p>
+						<div class="" style="text-align:center;">
+						<p class="" style="font-size: 30%;">75%</p>
+						<p class="" style="font-size: 30%">24+hr Remaining</p>
+						<p class="" style="font-size: 30%; color:greenyellow;">Charging</p>
+						</div>
+					</div>
+				</div>
+				<div class="statmiddleContainer">
+					<div class="statPSIContainerTopLeft mainFont">30PSI</div>
+					<div class="statPSIContainerBottomLeft mainFont">30PSI</div>
+					<div class="carContainer mainFont title">
+						<img id="carTopView" alt="Car Diagram" src="../static/images/car_top_view.png">
+					</div>
+					<div class="statPSIContainerTopRight mainFont">29PSI</div>
+					<div class="statPSIContainerBottomRight mainFont">30PSI</div>
+				</div>
+				<div class="statbottomContainer">
+					<div class="clickable odometerContainer mainFont title">28021</div>
+					<div class="clickable econContainer mainFont title">
+						<img id="econDiagram" alt="Economy Diagram" src="../static/images/economy_graph.png">
+					</div>
+				</div>
 			</div>
 
 			<div class="screen" id="settingScreen">

@@ -32,31 +32,30 @@ body {
 }
 
 .half {
-	height: 95%;
-	width: 48%;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	outline: 5px solid black;
-	margin: 0;
-	padding: 0;
 }
 
 #dashboard {
+	height: 95vh;
+	width: 60%;
 	justify-content: center;
 	align-items: center;
 }
 
+#mainScreen {
+	height: 95vh;
+	width: 56vh;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
 #dashBackground {
 	position: absolute;
-	width: 48vw;
+	width: 60%;
 	height: auto;
 	margin-top: 4%;
 	z-index: 1000;
-}
-
-#mainScreen {
-	justify-content: flex-start;
-	align-items: stretch;
 }
 
 .mainFont {
@@ -107,12 +106,12 @@ body {
 }
 
 .screenTitle {
-	font-size: 4vw;
+	font-size: 3vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
+	width: 90%;
 }
 
 #taskbarSide, #taskbarBottom {

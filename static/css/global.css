@@ -137,3 +137,210 @@ body {
 	width: 91.5%;
 	height: 95%;
 }
+
+
+
+
+/*Vanessa's Code*/
+
+.contactListingLight {
+	width: 100%;
+	height: 12%;
+	background-color: var(--bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+	justify-content: space-between;
+	padding: 1%;
+}
+
+.contactListingDark{
+	width: 100%;
+	height: 12%;
+	background-color: var(--less-bright-blue);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+	justify-content: space-between;
+	padding: 1%;
+}
+
+.contactIcon{
+	padding:2%;
+}
+
+.topContainer{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.statmiddleContainer{
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.statPSIContainerTopRight{
+	width: 15%;
+	height: 20%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: -30vh;
+
+}
+
+
+.statPSIContainerBottomRight{
+	width: 15%;
+	height: 20%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 30vh;
+	transform: translate(-100%, 0%);
+}
+
+.statPSIContainerTopLeft{
+	width: 15%;
+	height: 20%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: -30vh;
+	transform:translate(100%, 0%);
+}
+
+.statPSIContainerBottomLeft{
+	width: 15%;
+	height: 20%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 30vh;
+}
+
+
+
+.statbottomContainer{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.title{
+	font-size: 5vw;
+}
+
+.batteryContainer{
+	width: 60%;
+	height: 95%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.carContainer{
+	width: 40%;
+	height: 95%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.odometerContainer{
+	width: 40%;
+	height: 75%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.econContainer{
+	width: 40%;
+	height: 75%;
+	border: 1px solid var(--bright-blue)!important;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#carTopView{
+	width:10vw;
+	transform: rotateX(180deg)
+}
+
+#econDiagram{
+	width:40%;
+}
+
+.mainMapContainer{
+	width: 55%;
+	height: fit-content;
+	border: 1px solid var(--bright-blue)!important;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#mapPicture{
+	width:100%;
+	max-height: 100%;
+}
+
+.appRow{
+	width: 100%;
+	height: 31%;
+	background-color: var(--background);
+	display: flex;
+	align-items: center;
+	font-size: 3vw;
+	justify-content: space-evenly;
+	padding: 1%;
+}
+
+.appContainer{
+	width: 40%;
+	height: 70%;
+	border: 1px solid var(--bright-blue) !important;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.appImage{
+	width:80%;
+	margin-left:10%;
+	max-height: 15vh;
+}
+
+
+
+#directions{
+	width: 30%;
+	height: 100%;            
+	position: absolute;
+	background-color: var(--bright-blue);
+}

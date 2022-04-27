@@ -1,0 +1,118 @@
+/* Dashboard layout */
+.gearLetter {
+	font-size: 2vw;
+}
+
+#dashContainer {
+	position: relative;
+	width: 100%;
+}
+
+#dash {
+	width: 100%;
+	height: auto;
+}
+
+#speedSign {
+	width: 7%;
+	height: auto;
+	position: absolute;
+	top: 24%;
+	left: 34%;
+}
+
+#speedValue {
+	position: absolute;
+	top: 34%;
+	left: 35%;
+	font-size: 2vw;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#fuelLevel {
+	position: absolute;
+	top: 83%;
+	left: 9%;
+	font-size: 1.5vw;
+}
+
+#fuelIcon {
+	position: absolute;
+	top: 84%;
+	left: 22%;
+	font-size: 1.5vw;
+}
+
+#songWindow {
+	position: absolute;
+	top: 22%;
+	left: 11%;
+	width: 16%;
+	height: 57%;
+}
+
+#songPic {
+	width: 100%;
+	height: auto;
+}
+
+#songTitle {
+	font-size: 1.2vw;
+}
+
+#songArtist {
+	font-size: 0.8vw;
+}
+
+#driverSpeed {
+	position: absolute;
+	top: 5%;
+	left: 40%;
+	font-size: 2.7vw;
+}
+
+#cruise {
+	position: absolute;
+	top: 25%;
+	left: 43%;
+	width: 13%;
+	height: 17%;
+}
+
+#cruiseToggle {
+	font-size: 1.2vw;
+}
+
+#cruiseDialogue {
+	font-size: 1.2vw;
+}
+
+#gear {
+	position: absolute;
+	top: 83%;
+	left: 73%;
+	width: 15%;
+	height: 10%;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+#economy {
+	position: absolute;
+	top: 15%;
+	left: 73%;
+	width: 22%;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#econGauge {
+	width: 100%;
+	height: auto;
+}
+
+#econDialogue {
+	font-size: 1.2vw;
+}

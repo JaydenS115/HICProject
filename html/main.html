@@ -10,38 +10,42 @@
 	<meta name="author" content="Colby Reinhart, Vanessa Sanders, Jayden Stearns">
 
 	<link rel="stylesheet" href="../static/css/global.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../static/js/main.js"></script>
+	<link rel="stylesheet" href="../static/css/dashboard.css">
+	<link rel="stylesheet" href="../static/css/audio.css">
+	<link rel="stylesheet" href="../static/css/settings.css">
+	<link rel="stylesheet" href="../static/css/scrollbar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<script defer src="../static/js/main.js"></script>
 </head>
 
-<body>
+<body class="mainFont">
 	<div id="dashboard" class="half flexRow">
 		<img id="dashBackground" alt="dashboard background" src="../static/images/steeringWheelCropped2.png">
 		<div id="dashContainer">
 			<img id="dash" alt="Driver dashboard" src="../static/images/driver_dashboard_complete.png">
 			<img id="speedSign" alt="speed limit sign" src="../static/images/speed_limit_template.png">
 			<p id="speedValue">35</p>
-			<p id="fuelLevel" class="mainFont brightBlue">POWER</p>
+			<p id="fuelLevel" class="brightBlue">POWER</p>
 			<p id="fuelIcon" class="fa fa-battery-full brightBlue"></p>
-			<div id="songWindow">
-				<img id="songPic" alt="Album Picture" src="../static/images/beatles.jpg">
-				<p id="songTitle" class="mainFont goodWhite">Hey Jude</p>
-				<p id="songArtist" class="mainFont goodWhite">The Beatles</p>
+			<div id="songWindow" class="goodWhite stream">
+				<img id="songPic" class="songFile" alt="Album Picture" src="../static/images/beatles.jpg">
+				<p id="songTitle" class="songTitle">Hey Jude</p>
+				<p id="songArtist" class="songArtist">The Beatles</p>
 			</div>
-			<p id="driverSpeed" class="mainFont goodWhite">50 MPH</p>
+			<p id="driverSpeed" class="goodWhite">50 MPH</p>
 			<div id="cruise">
 				<p id="cruiseToggle" class="brightBlue fa fa-toggle-on"></p>
-				<p id="cruiseDialogue" class="brightBlue mainFont">CRUISE ON</p>
+				<p id="cruiseDialogue" class="brightBlue">CRUISE ON</p>
 			</div>
 			<div id="gear">
-				<p id="parkGear" class="goodWhite gearLetter mainFont">P</p>
-				<p id="reverseGear" class="brightBlue gearLetter mainFont">R</p>
-				<p id="neutralGear" class="brightBlue gearLetter mainFont">N</p>
-				<p id="driveGear" class="brightBlue gearLetter mainFont">D</p>
+				<p id="parkGear" class="goodWhite gearLetter">P</p>
+				<p id="reverseGear" class="brightBlue gearLetter">R</p>
+				<p id="neutralGear" class="brightBlue gearLetter">N</p>
+				<p id="driveGear" class="brightBlue gearLetter">D</p>
 			</div>
 			<div id="economy">
 				<img id="econGauge" alt="economy gauge" src="../static/images/economy_graph.png">
-				<p id="econDialogue" class="goodWhite mainFont">ECONOMY (Wh/mi)</p>
+				<p id="econDialogue" class="goodWhite">ECONOMY (Wh/mi)</p>
 			</div>
 		</div>
 	</div>
@@ -54,14 +58,59 @@
 		<div id="screenContainer">
 			<div class="screen" id="homeScreen">
 				Home screen
-				<button onclick="switchScreen('audioScreen')">Go to audio screen</button>
-				<button onclick="switchScreen('phoneScreen')">Go to Contacts screen</button>
-				<button onclick="switchScreen('statScreen')">Go to Stats screen</button>
+
+				<button class="clickable" onclick="switchScreen('audioScreen')">Go to audio screen</button>
+				Settings screen
+				<button class="clickable" onclick="switchScreen('settingScreen')">Go to settings screen</button>
+
 			</div>
+
 			<div class="screen" id="audioScreen">
-				Audio screen
-				<button onclick="switchScreen('phoneScreen')">Go to Contacts screen</button>
+
+				<div class="screenTitle">
+					AUDIO AND MUSIC
+				</div>
+				<div id="streamingSelector">
+					<img class="audioImage clickable" alt="Spotify" src="../static/images/spotify_logo.png">
+					<img class="audioImage clickable" alt="Apple Music" src="../static/images/apple_music.png">
+					<img class="audioImage clickable" alt="Pandora" src="../static/images/pandora.png">
+					<img class="audioImage clickable" alt="Youtube Music" src="../static/images/youtube-music-logo-1.png">
+					<img class="audioImage clickable" alt="Soundcloud" src="../static/images/soundcloud.webp">
+				</div>
+				<div id="soundSettings">
+					<div id="soundSliders">
+						VOLUME
+						<input type="range">
+						BASS
+						<input type="range">
+						TREBLE
+						<input type="range">
+					</div>
+					<div id="soundLocator">
+						SOUND
+						<div id="soundLocatorBox">
+							<img id="carImage" class="clickable" alt="Car representation" src="../static/images/car_top_view.png">
+							<div id="soundMover">
+								<i id="soundMoverGlyph" class="fa-solid fa-o brightBlue"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="musicPlayer" class="stream">
+					<h1 class="songTitle">Hey Jude</h1>
+					<p class="songArtist">The Beatles</p>
+					<img class="songFile" alt="albumCover" src="../static/images/beatles.jpg">
+				</div>
+				<div id="soundBar">
+					<i class="clickable fa-regular fa-bookmark hollowBookmark toggleable"></i>
+					<i class="clickable fa-solid fa-backward-step songBackward"></i>
+					<i class="clickable fa-solid fa-pause pauseButton toggleable"></i>
+					<i class="clickable fa-solid fa-forward-step songForward"></i>
+					<i class="clickable fa-solid fa-repeat"></i>
+				</div>
+
 			</div>
+
 			<div class="screen" id="phoneScreen">
 				<div class="topContainer">
 					<h1 class="mainFont title">Phone Contacts</h1>
@@ -148,9 +197,97 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="screen" id="settingScreen">
-				Settings screen
+				<div class="settingBlock">
+					<div class="settingBlockTitle">
+						<h1>BLUETOOTH</h1>
+						<i class="fa-brands fa-bluetooth-b settingIcon"></i>
+					</div>
+					<p id="bluetoothFeedback" class="brightBlue">Connected - Jon's Iphone</p>
+					<div id="bluetoothButtons" class="settingRow">
+						<button type="button" id="btToggle" class="settingsButton goodWhite mainFont clickable" onclick="toggleBluetooth()">Disconnect</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="turnonBluetooth()">Pair</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="turnoffBluetooth()">Forget</button>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="settingBlock">
+					<div class="settingBlockTitle">
+						<h1>MOBILITY</h1>
+						<i class="fa-solid fa-bolt settingIcon"></i>
+					</div>
+					<div class="settingRow">
+						<label class="switch clickable">
+							<input type="checkbox" checked>
+							<span class="slider round"></span>
+						</label>
+						<p class="brightBlue">ECO Mode</p>
+					</div>
+					<div class="settingRow">
+						<label class="switch clickable">
+							<input type="checkbox" checked>
+							<span class="slider round"></span>
+						</label>
+						<p class="brightBlue">Traction Control</p>
+					</div>
+					<div class="settingRow">
+						<label class="switch clickable">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</label>
+						<p class="brightBlue">Sport Mode</p>
+					</div>
+				</div>
+
+				<hr>
+
+				<div id="profileList" class="settingBlock">
+					<div class="settingBlockTitle">
+						<h1>PROFILE</h1>
+						<i class="fa-solid fa-user settingIcon"></i>
+					</div>
+					<div class="settingRow">
+						<div class="brightBlue settingName user">Jon</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
+					</div>
+					<div class="settingRow">
+						<div class="brightBlue settingName user">Lisa</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
+					</div>
+					<div class="settingRow">
+						<div class="brightBlue settingName user">Blake</div>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="deleteProfile(this)">Delete</button>
+						<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="editProfile(this)">Edit</button>
+					</div>
+				</div>
+				<div class="settingBlock">
+					<button type="button" class="settingsButton goodWhite mainFont clickable" onclick="newProfile()">New profile</button>
+				</div>
+
+				<hr>
+
+				<div class="settingBlock">
+					<div class="settingBlockTitle">
+						<h1>NAVIGATION</h1>
+						<i class="fa-solid fa-location-dot settingIcon"></i>
+					</div>
+					<div class="settingRow">
+						<p class="brightBlue settingName">Home</p>
+						<input id="homeInput" class="mainFont goodInput clickable" type="text" value="375 Eastway Drive, Kent, OH 44214">
+					</div>
+					<div class="settingRow">
+						<p class="brightBlue settingName">Work</p>
+						<input id="workInput" class="mainFont goodInput clickable" type="text" value="211 Commerce Drive, Medina, OH 44256">
+					</div>
+
+				</div>
 			</div>
+
 			<div class="screen" id="backupScreen">
 				Backup screen
 			</div>

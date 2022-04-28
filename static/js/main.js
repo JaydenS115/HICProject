@@ -188,7 +188,9 @@ const toggleButtons = {
 	"hollowBookmark": "clickable fa-solid fa-bookmark solidBookmark toggleable",
 	"solidBookmark": "clickable fa-regular fa-bookmark hollowBookmark toggleable",
 	"pauseButton": "clickable fa-solid fa-play playButton toggleable",
-	"playButton": "clickable fa-solid fa-pause pauseButton toggleable"
+	"playButton": "clickable fa-solid fa-pause pauseButton toggleable",
+	"volumeOnButton": "clickable fa fa-volume-off volumeOffButton toggleable",
+	"volumeOffButton": "clickable fa fa-volume-up volumeOnButton toggleable"
 };
 document.querySelectorAll(".toggleable").forEach((e) => {
 	e.addEventListener("click", () => {

@@ -85,8 +85,8 @@
 			</div>
 
 			<div class="screen" id="audioScreen">
-				<div class="screenTitle">
-					AUDIO AND MUSIC
+				<div class="screenTitle title">
+					Audio + Music
 				</div>
 				<div id="streamingSelector">
 					<img class="audioImage clickable" alt="Spotify" src="../static/images/spotify_logo.png">
@@ -115,8 +115,10 @@
 					</div>
 				</div>
 				<div id="musicPlayer" class="stream">
-					<h1 class="songTitle">Hey Jude</h1>
-					<p class="songArtist">The Beatles</p>
+					<div id="musicContainer">
+						<p class="songTitle">Hey Jude</p>
+						<p class="songArtist">The Beatles</p>
+					</div>
 					<img class="songFile" alt="albumCover" src="../static/images/beatles.jpg">
 				</div>
 				<div id="soundBar">
@@ -198,13 +200,17 @@
 					</div>
 				</div>
 				<div class="statmiddleContainer">
-					<div class="statPSIContainerTopLeft mainFont">30PSI</div>
-					<div class="statPSIContainerBottomLeft mainFont">30PSI</div>
+					<div class="psiContainer">
+						<div class="psiReading mainFont">30PSI</div>
+						<div class="psiReading mainFont">30PSI</div>
+					</div>
 					<div class="carContainer mainFont title">
 						<img id="carTopView" alt="Car Diagram" src="../static/images/car_top_view.png">
 					</div>
-					<div class="statPSIContainerTopRight mainFont">29PSI</div>
-					<div class="statPSIContainerBottomRight mainFont">30PSI</div>
+					<div class="psiContainer">
+						<div class="psiReading mainFont">29PSI</div>
+						<div class="psiReading mainFont">30PSI</div>
+					</div>
 				</div>
 				<div class="statbottomContainer">
 					<div class="clickable odometerContainer mainFont title">28021</div>

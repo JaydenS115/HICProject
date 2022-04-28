@@ -28,7 +28,7 @@
 	flex-wrap: nowrap;
 	align-items: center;
 	align-content: flex-start;
-	font-size: 3vw;
+	font-size: 2vw;
 }
 
 #soundSliders {
@@ -95,12 +95,13 @@
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	font-size: 3vw;
+	font-size: 2vw;
 	gap: 2% 8%;
 }
 
-#musicPlayer > h1 {
-	font-size: 3vw;
+#musicContainer {
+	height: auto;
+	width: 40%;
 }
 
 #musicPlayer > img {
@@ -119,5 +120,5 @@
 	align-items: center;
 	align-content: center;
 	justify-content: space-evenly;
-	font-size: 5vw;
+	font-size: 4vw;
 }

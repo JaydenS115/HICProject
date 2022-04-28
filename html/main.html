@@ -51,6 +51,10 @@
 				<p id="econDialogue" class="goodWhite">ECONOMY (Wh/mi)</p>
 			</div>
 		</div>
+		<div style="position:absolute; top:2%; left:2%">
+		<button type="button" class="settingsButton goodWhite mainFont clickable" 
+			onclick="switchScreen('backupScreen')">Backup Camera View</button>
+		</div>
 	</div>
 	<div id="mainScreen" class="half flexRow">
 		<div id="taskbarSide" class="flexRow">
@@ -372,8 +376,16 @@
 				</div>
 			</div>
 
-			<div class="screen" id="backupScreen">
-				Backup screen
+			<div class="screen" id="backupScreen" style="text-align:center;">
+				<div class="backupViewContainer"
+				style=" background-color: var(--bright-blue); width: 96%; padding-right: 10%">
+					<img id="mapPicture" alt="map" style="padding:2%" src="../static/images/Backup_View.jpeg">
+				</div>
+				
+				<div class="sensorTopViewContainer"
+				style="height: 60%; margin: 0 auto; padding-top:10%">
+					<img id="mapPicture" alt="map" src="../static/images/Car_Sensors.png">
+				</div>
 			</div>
 		</div>
 		<div id="taskbarBottom" class="flexRow">

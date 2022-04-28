@@ -58,7 +58,7 @@
 		</div>
 	</div>
 	<div id="mainScreen" class="half flexRow">
-		<div id="taskbarSide" class="flexRow">
+		<div id="taskbarSide">
 			<p class="fa fa-home clickable"       onclick="switchScreen('homeScreen')"    
 				style="color:white; font-size: 150%; margin-top: 25%;"></p><br/>
 			<p class="fa fa-music clickable"      onclick="switchScreen('audioScreen')"   
@@ -71,19 +71,22 @@
 				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
 			<p class="fa fa-sliders clickable"    onclick="switchScreen('settingScreen')" 
 				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
-
-			<p class="fa fa-chevron-up clickable" 
-				style="color:white; font-size: 150%; margin-top: 125%;"></p><br/>
-			<p class="fa fa-life-ring"
-				style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
-			<p class="fa fa-chevron-down clickable"
-				style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
-			<p class="fa fa-chevron-up clickable"
-				style="color:white; font-size: 150%; margin-top: 75%;"></p><br/>
-			<p class="fa fa-thermometer-3"
-				style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
-			<p class="fa fa-chevron-down clickable"
-				style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
+			<div class="sideBarContainer">
+				<p class="fa fa-chevron-up clickable" 
+					style="color:white; font-size: 150%; margin-top: 125%;"></p><br/>
+				<p class="fa fa-life-ring"
+					style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
+				<p class="fa fa-chevron-down clickable"
+					style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
+			</div>
+			<div class="sideBarContainer">
+				<p class="fa fa-chevron-up clickable"
+					style="color:white; font-size: 150%; margin-top: 75%;"></p><br/>
+				<p class="fa fa-thermometer-3"
+					style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
+				<p class="fa fa-chevron-down clickable"
+					style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
+			</div>
 		</div>
 		<div id="screenContainer">
 			<div class="screen" id="homeScreen">

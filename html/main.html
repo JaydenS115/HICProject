@@ -55,9 +55,31 @@
 	</div>
 	<div id="mainScreen" class="half flexRow">
 		<div id="taskbarSide" class="flexRow">
-			<p class="fa fa-comment" style="font-size: 250%"></p>
-			<p class="fa fa-comment" style="font-size: 250%"></p>
-			<p class="fa fa-comment" style="font-size: 250%"></p>
+			<p class="fa fa-home clickable"       onclick="switchScreen('homeScreen')"    
+				style="color:white; font-size: 150%; margin-top: 25%;"></p><br/>
+			<p class="fa fa-music clickable"      onclick="switchScreen('audioScreen')"   
+				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
+			<p class="fa fa-comment clickable"    onclick="switchScreen('phoneScreen')"   
+				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
+			<p class="fa fa-map-pin clickable"    onclick="switchScreen('mapScreen')"     
+				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
+			<p class="fa fa-car clickable"        onclick="switchScreen('statScreen')"    
+				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
+			<p class="fa fa-sliders clickable"    onclick="switchScreen('settingScreen')" 
+				style="color:white; font-size: 150%; margin-top: -10%;"></p><br/>
+
+			<p class="fa fa-chevron-up clickable" 
+				style="color:white; font-size: 150%; margin-top: 125%;"></p><br/>
+			<p class="fa fa-life-ring"
+				style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
+			<p class="fa fa-chevron-down clickable"
+				style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
+			<p class="fa fa-chevron-up clickable"
+				style="color:white; font-size: 150%; margin-top: 75%;"></p><br/>
+			<p class="fa fa-thermometer-3"
+				style="color:white; font-size: 175%; margin-top: -75%;"></p><br/>
+			<p class="fa fa-chevron-down clickable"
+				style="color:white; font-size: 150%; margin-top: -75%;"></p><br/>
 		</div>
 		<div id="screenContainer">
 			<div class="screen" id="homeScreen">
@@ -135,7 +157,7 @@
 					<!-- Modal content -->
 					<div class="modal-content">
 					  <span class="close">&times;</span>
-					  <p>Calling yo mama...</p>
+					  <p>Calling contact...</p>
 					</div>
 				  </div>
 				<div class="topContainer">
@@ -192,9 +214,49 @@
 					<p class="clickable contactIcon fa fa-trash" style="font-size: 150%"></p>
 				</div>
 			</div>
-			<div class="screen" id="mapScreen">
-				Map screen
+
+			<div class="screen" id="mapScreen" style="align-content:center; align-items:center">
+				<div style="align-content: center; justify-content: center;">
+					<div class="mapPicture" 
+					style=" background-color: var(--bright-blue); width: 95%; padding-right: 10%">
+						<img id="mapPicture" alt="map" style="padding: 2%" src="../static/images/outstanding-road-map-vectors.webp">
+					</div>
+
+					<div style="justify-content:center; align-items: center; padding-left: 15%">
+						<br/><br/><p><i class="fa fa-caret-up" style="color:white"></i> In 600 feet, Merge Right onto I-95</p> <br/>
+						<p><i class="fa fa-caret-up" style="color:white"></i> Continue on I-95 for 10.5 miles</p> <br/>
+						<p><i class="fa fa-caret-up" style="color:white"></i> Exit on Right</p> <br/> <br/>
+					</div>
+
+					<div 
+					style="width:100%; align-items:center; justify-content: center; background-color: var(--bright-blue);text-align: center;">
+						<br/>
+						<form>
+							<input type="text" placeholder="Search..." name="search">
+							<i class="fa fa-search"></i>
+						</form>
+						<br/>
+						<h2><u>Favorites</u></h2>
+						<br/>
+						<div style="text-align: center;">
+							<div class="locFavs" style="margin-left:0%">
+							<i class="fa fa-home" style="font-size:300%"></i><br/>Home
+							</div>
+							<div class="locFavs">
+							<i class="fa fa-building" style="font-size:300%;"></i><br/>Work
+							</div>
+							<div class="locFavs">
+							<i class="fa fa-train-subway" style="font-size:300%;"></i> <br/>Transit
+							</div>
+						</div>
+
+						<br/>
+
+					</div>
+				</div>
+
 			</div>
+
 			<div class="screen" id="statScreen">
 				<div class="topContainer">
 					<div class="batteryContainer mainFont title">
@@ -322,6 +384,30 @@
 			</div>
 		</div>
 		<div id="taskbarBottom" class="flexRow">
+			<p class="fa fa-asterisk clickable"   
+				style="color:white; font-size: 175%; margin-left: 1.5%; margin-bottom:1%"></p>
+
+			<p class="fa fa-caret-down clickable"   
+				style="color:white; font-size: 125%; margin-left: 5%"></p>
+			<p class="clickable fa fa-volume-up volumeOnButton toggleable"   
+				style="color:white; font-size: 125%; margin-left: -2%"></p>
+			<p class="fa fa-caret-up clickable"   
+				style="color:white; font-size: 125%; margin-left: -2%"></p>
+
+			<i class="clickable fa-solid fa-backward-step songBackward"
+				style="color:white; font-size: 125%; margin-left: 5%"></i>
+			<i class="clickable fa-solid fa-pause pauseButton toggleable"
+				style="color:white; font-size: 125%; margin-left: -2%"></i>
+			<i class="clickable fa-solid fa-forward-step songForward"
+				style="color:white; font-size: 125%; margin-left: -2%"></i>
+
+			<i class="clickable fa fa-music fa-border" onclick="switchScreen('audioScreen')"
+				style="color:white; font-size: 100%; margin-left: 3%"></i>
+
+			<div class="stream" style="color:white">
+				<p class="songTitle" style="font-size:75%">Hey Jude</h1>
+				<p class="songArtist" style="font-size:75%">The Beatles</p>
+			</div>
 
 		</div>
 	</div>
